@@ -1,0 +1,78 @@
+/* === BirthdayCard Styles === */
+.card-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff5e6;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .animated-text {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    animation: bounce 2s infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0); 
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .message {
+    font-size: 1.2rem;
+    color: #444;
+    margin: 1rem 0 2rem;
+  }
+  
+  .reveal-button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reveal-button:hover {
+    background-color: #e65b50;
+  }
+  
+  
+  /* === PhotoReveal Styles === */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* responsive columns */
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 0; /* Make sure there's no padding around the grid */
+    max-width: 100%; /* Ensures grid stays within bounds */
+    overflow: hidden; /* Prevents images from overflowing */
+  }
+  
+  .photo {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    object-fit: cover; /* Ensures images fit inside their container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  .photo-grid.hidden {
+    display: none;
+  }
+  
